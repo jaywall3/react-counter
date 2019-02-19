@@ -18,18 +18,30 @@ function App() {
       <Button increment={10} onClickFunction={incrementCount} />
       <Button increment={100} onClickFunction={incrementCount} />
       <Button increment={1000} onClickFunction={incrementCount} />
-      <Button increment={10000} onClickFunction={incrementCount} />
       <Button increment={-1} onClickFunction={incrementCount} />
       <Button increment={-10} onClickFunction={incrementCount} />
       <Button increment={-100} onClickFunction={incrementCount} />
       <Button increment={-1000} onClickFunction={incrementCount} />
-      <Button increment={-10000} onClickFunction={incrementCount} />
-      <Button increment={-count} onClickFunction={incrementCount} />
-
+      <Button
+        label="Double"
+        increment={count}
+        onClickFunction={incrementCount}
+      />
+      <Button
+        label="Reset"
+        increment={-count}
+        onClickFunction={incrementCount}
+      />
+      <Button
+        label="Save"
+        increment={count * 100}
+        onClickFunction={incrementCount}
+      />
       <span>{count}</span>
     </div>
   );
 }
+
 // Tried to label button as "Reset" - didn't work
 // Reset functionality works
 

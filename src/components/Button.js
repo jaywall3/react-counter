@@ -1,10 +1,17 @@
-import React from 'react'
+import React from "react";
 
-const Button = ({ increment, onClickFunction }) => {
+const Button = props => {
+  const increment = props.increment;
+  const onClickFunction = props.onClickFunction;
+  let label = props.label;
   const handleClick = () => {
-    onClickFunction(increment)
+    onClickFunction(increment);
+  };
+  // console.log(label);
+  if (label === undefined) {
+    label = increment;
   }
-  return <button onClick={handleClick}>+{increment}</button>
-}
+  return <button onClick={handleClick}>{label}</button>;
+};
 
-export default Button
+export default Button;
